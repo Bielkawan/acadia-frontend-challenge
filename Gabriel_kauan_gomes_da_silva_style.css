@@ -1,0 +1,143 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior:  smooth;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} 
+body {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#search-input {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+#add-sample {
+    background-color: #6f42c1; /* Roxo para diferenciar */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#add-sample:hover {
+    background-color: #59359a;
+}
+
+
+.product-grid {
+    display: grid; 
+    text-align: center;
+    gap: 20px;
+    grid-template-columns: 1fr; 
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column; 
+    padding-bottom: 15px;
+}
+/* Classe que será adicionada via JavaScript */
+.card-selecionado {
+    border: 2px solid #28a745 !important; 
+    background-color: #f0fff4; /* Fundo levemente verde */
+    transform: scale(1.02); /* Dá um leve aumento no tamanho para destacar */
+    transition: all 0.3s ease;
+}
+.btn-adicionado {
+    background-color: #28a745 !important;
+}
+
+
+.product-img {
+    width: 100%;
+    height: 250px;    
+    object-fit: contain; /* 'contain' mostra a imagem INTEIRA sem cortar */
+    background-color: #fff; 
+    padding: 10px;    
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.product-title {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.product-desc {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.product-price {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+.btn-add {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition:  0.3s;
+}
+
+.btn-add:hover {
+    background-color: #0056b3;
+}
+
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas de tamanhos iguais */
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanhos iguais */
+    }
+}
